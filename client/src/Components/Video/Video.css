@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.video-card{
+
+    width:420px;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.video-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.video-screen{
+
+    position:relative;
+
+    width:100%;
+
+    height:280px;
+
+    background:#111827;
+
+}
+
+.video-player{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.video-placeholder{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+.avatar{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
+}
+
+.video-placeholder h2{
+
+    font-size:26px;
+
+}
+
+.video-status{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.online-dot{
+
+    width:12px;
+
+    height:12px;
+
+    background:#22c55e;
+
+    border-radius:50%;
+
+}
+
+.status-icons{
+
+    display:flex;
+
+    gap:18px;
+
+    font-size:22px;
+
+}
+
+.active{
+
+    color:#16a34a;
+
+}
+
+.inactive{
+
+    color:#ef4444;
+
+}
+
+.video-controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:20px;
+
+    border-top:1px solid #ddd;
+
+}
+
+.video-controls button{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.video-controls button:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.1);
+
+}
+
+@media(max-width:768px){
+
+.video-card{
+
+width:95%;
+
+margin:auto;
+
+}
+
+.video-screen{
+
+height:220px;
+
+}
+
+.avatar{
+
+width:70px;
+
+height:70px;
+
+font-size:30px;
+
+}
+
+.video-placeholder h2{
+
+font-size:22px;
+
+}
+
+}

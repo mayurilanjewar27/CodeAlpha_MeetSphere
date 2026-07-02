@@ -1,0 +1,19 @@
+.meeting-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.meeting-container h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.meeting-container p{
+    font-size:22px;
+}

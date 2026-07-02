@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.participants{
+
+    width:100%;
+    max-width:1000px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.participants-header{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.participants-header h2{
+
+    font-size:30px;
+
+}
+
+.participants-list{
+
+    padding:30px;
+
+}
+
+.participant-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.participant-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.1);
+
+}
+
+.participant-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.avatar{
+
+    font-size:60px;
+
+    color:#2563eb;
+
+}
+
+.participant-left h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+}
+
+.host-icon{
+
+    color:gold;
+
+}
+
+.participant-left p{
+
+    color:gray;
+
+    margin-top:5px;
+
+}
+
+.participant-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    font-size:22px;
+
+}
+
+.online{
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+.offline{
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+.green{
+
+    color:#16a34a;
+
+}
+
+.red{
+
+    color:#dc2626;
+
+}
+
+@media(max-width:768px){
+
+.participant-card{
+
+flex-direction:column;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.participant-left{
+
+flex-direction:column;
+
+}
+
+.participant-right{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.participants-header{
+
+flex-direction:column;
+
+gap:10px;
+
+text-align:center;
+
+}
+
+}

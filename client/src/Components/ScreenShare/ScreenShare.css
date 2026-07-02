@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.screen-share{
+
+    width:100%;
+    max-width:1100px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.screen-header{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.screen-header h2{
+
+    font-size:30px;
+
+}
+
+.screen-preview{
+
+    height:500px;
+
+    background:#111827;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.screen-active,
+.screen-idle{
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.screen-icon{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+    color:#60a5fa;
+
+}
+
+.screen-active h2,
+.screen-idle h2{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+.screen-active p,
+.screen-idle p{
+
+    font-size:18px;
+
+    color:#d1d5db;
+
+}
+
+.screen-controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:25px;
+
+    background:#f8fafc;
+
+}
+
+.share-btn{
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+.share-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.fullscreen-btn,
+.participants-btn{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#e2e8f0;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.fullscreen-btn:hover,
+.participants-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+@media(max-width:768px){
+
+.screen-header{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:10px;
+
+}
+
+.screen-preview{
+
+height:300px;
+
+}
+
+.screen-icon{
+
+font-size:60px;
+
+}
+
+.screen-active h2,
+.screen-idle h2{
+
+font-size:24px;
+
+}
+
+.screen-active p,
+.screen-idle p{
+
+font-size:15px;
+
+}
+
+.screen-controls{
+
+flex-wrap:wrap;
+
+}
+
+.share-btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+}

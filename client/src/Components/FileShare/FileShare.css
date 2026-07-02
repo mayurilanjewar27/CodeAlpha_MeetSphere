@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.file-share{
+
+    width:100%;
+    max-width:1000px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.file-header{
+
+    background:#2563eb;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.file-header h2{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+.upload-box{
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+.upload-box label{
+
+    display:block;
+
+    border:3px dashed #2563eb;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.upload-box label:hover{
+
+    background:#eff6ff;
+
+}
+
+.upload-icon{
+
+    font-size:60px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.upload-box h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.upload-box p{
+
+    color:gray;
+
+}
+
+input[type=file]{
+
+    display:none;
+
+}
+
+.file-list{
+
+    padding:30px;
+
+}
+
+.empty{
+
+    text-align:center;
+
+    color:gray;
+
+}
+
+.file-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+}
+
+.file-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.file-info svg{
+
+    font-size:45px;
+
+}
+
+.pdf{
+
+    color:#dc2626;
+
+}
+
+.word{
+
+    color:#2563eb;
+
+}
+
+.image{
+
+    color:#16a34a;
+
+}
+
+.default{
+
+    color:#6b7280;
+
+}
+
+.file-info h4{
+
+    font-size:20px;
+
+}
+
+.file-info span{
+
+    color:gray;
+
+}
+
+.file-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.file-buttons button{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.download{
+
+    background:#16a34a;
+
+}
+
+.download:hover{
+
+    background:#15803d;
+
+}
+
+.delete{
+
+    background:#dc2626;
+
+}
+
+.delete:hover{
+
+    background:#b91c1c;
+
+}
+
+@media(max-width:768px){
+
+.file-card{
+
+flex-direction:column;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.file-info{
+
+flex-direction:column;
+
+}
+
+.file-buttons{
+
+justify-content:center;
+
+}
+
+.upload-box label{
+
+padding:30px;
+
+}
+
+}
