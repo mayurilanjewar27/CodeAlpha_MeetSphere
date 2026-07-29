@@ -42,21 +42,13 @@ function Video() {
 
           <h2>{user.name}</h2>
 
-        </div>
+        
 
       </div>
 
       {/* Status */}
 
-      <div className="video-status">
-
-        <div className="user-info">
-
-          <span className="online-dot"></span>
-
-          <h3>{user.name}</h3>
-
-        </div>
+     
 
         <div className="status-icons">
 

@@ -4,18 +4,41 @@ import {
   FaVideo,
   FaUsers,
   FaDesktop,
-  FaChalkboardTeacher,
-  FaCloudUploadAlt,
-  FaLock
+  FaShieldAlt,
+  FaPlayCircle,
+  FaArrowRight
 } from "react-icons/fa";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 function Home() {
+
+  const features = [
+    {
+      icon: <FaVideo />,
+      title: "HD Video Meetings",
+      desc: "Crystal clear video meetings with unlimited participants."
+    },
+    {
+      icon: <FaDesktop />,
+      title: "Screen Sharing",
+      desc: "Present your ideas with one-click screen sharing."
+    },
+    {
+      icon: <FaUsers />,
+      title: "Team Collaboration",
+      desc: "Work together using chat and collaborative tools."
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "Secure Meetings",
+      desc: "JWT Authentication & encrypted communication."
+    }
+  ];
+
   return (
     <>
-
       <Navbar />
 
       {/* Hero Section */}
@@ -24,17 +47,21 @@ function Home() {
 
         <div className="hero-left">
 
+          <span className="tag">
+            🚀 Next Generation Meeting Platform
+          </span>
+
           <h1>
-            Connect,
-            Collaborate &
-            Communicate
+            Connect.
+            Collaborate.
+            Create.
           </h1>
 
           <p>
-            MeetSphere is a modern video conferencing platform
-            that helps teams connect through HD meetings,
-            screen sharing, live chat, collaborative whiteboard,
-            and secure file sharing.
+            MeetSphere helps teams communicate with
+            HD Video Calls, Live Chat,
+            Whiteboard, Screen Sharing and
+            Secure Collaboration.
           </p>
 
           <div className="hero-buttons">
@@ -42,15 +69,21 @@ function Home() {
             <Link to="/meeting/demo123">
 
               <button className="join-btn">
+
                 Join Meeting
+
               </button>
 
             </Link>
 
             <Link to="/register">
 
-              <button className="create-btn">
-                Create Account
+              <button className="demo-btn">
+
+                <FaPlayCircle />
+
+                Watch Demo
+
               </button>
 
             </Link>
@@ -61,97 +94,35 @@ function Home() {
 
         <div className="hero-right">
 
-          <div className="hero-card">
+          <div className="meeting-window">
 
-            <FaVideo className="hero-icon"/>
+            <div className="meeting-top">
 
-            <h2>HD Video Meetings</h2>
+              <span className="red"></span>
 
-            <p>Crystal clear video & audio communication.</p>
+              <span className="yellow"></span>
 
-          </div>
+              <span className="green"></span>
 
-        </div>
+            </div>
 
-      </section>
+            <div className="meeting-grid">
 
-      {/* Features */}
+              <div className="video-card">👩 Mayuri</div>
 
-      <section className="features">
+              <div className="video-card">👨 Alex</div>
 
-        <h2>Our Features</h2>
+              <div className="video-card">👩 Sara</div>
 
-        <div className="feature-grid">
+              <div className="video-card">👨 John</div>
 
-          <div className="feature-card">
+            </div>
 
-            <FaVideo className="feature-icon"/>
+            <div className="meeting-controls">
 
-            <h3>Video Meetings</h3>
+              🎤 📹 💬 🖥️ 👥 🔴
 
-            <p>
-              High quality HD meetings with multiple participants.
-            </p>
-
-          </div>
-
-          <div className="feature-card">
-
-            <FaDesktop className="feature-icon"/>
-
-            <h3>Screen Sharing</h3>
-
-            <p>
-              Present your screen in one click.
-            </p>
-
-          </div>
-
-          <div className="feature-card">
-
-            <FaUsers className="feature-icon"/>
-
-            <h3>Group Meetings</h3>
-
-            <p>
-              Invite unlimited participants.
-            </p>
-
-          </div>
-
-          <div className="feature-card">
-
-            <FaCloudUploadAlt className="feature-icon"/>
-
-            <h3>File Sharing</h3>
-
-            <p>
-              Share files securely during meetings.
-            </p>
-
-          </div>
-
-          <div className="feature-card">
-
-            <FaChalkboardTeacher className="feature-icon"/>
-
-            <h3>Whiteboard</h3>
-
-            <p>
-              Collaborate using live drawing tools.
-            </p>
-
-          </div>
-
-          <div className="feature-card">
-
-            <FaLock className="feature-icon"/>
-
-            <h3>Secure Meetings</h3>
-
-            <p>
-              JWT authentication and encrypted communication.
-            </p>
+            </div>
 
           </div>
 
@@ -163,31 +134,31 @@ function Home() {
 
       <section className="stats">
 
-        <div className="stat-box">
+        <div>
 
           <h2>5000+</h2>
 
-          <p>Users</p>
+          <p>Active Users</p>
 
         </div>
 
-        <div className="stat-box">
+        <div>
 
           <h2>1200+</h2>
 
-          <p>Meetings</p>
+          <p>Meetings Daily</p>
 
         </div>
 
-        <div className="stat-box">
+        <div>
 
           <h2>99.9%</h2>
 
-          <p>Server Uptime</p>
+          <p>Uptime</p>
 
         </div>
 
-        <div className="stat-box">
+        <div>
 
           <h2>24/7</h2>
 
@@ -197,20 +168,85 @@ function Home() {
 
       </section>
 
+      {/* Features */}
+
+      <section className="features">
+
+        <h2>
+
+          Why Choose MeetSphere?
+
+        </h2>
+
+        <p>
+
+          Everything you need for professional online meetings.
+
+        </p>
+
+        <div className="feature-grid">
+
+          {
+
+            features.map((item,index)=>(
+
+              <div
+                className="feature-card"
+                key={index}
+              >
+
+                <div className="icon">
+
+                  {item.icon}
+
+                </div>
+
+                <h3>
+
+                  {item.title}
+
+                </h3>
+
+                <p>
+
+                  {item.desc}
+
+                </p>
+
+              </div>
+
+            ))
+
+          }
+
+        </div>
+
+      </section>
+
       {/* CTA */}
 
       <section className="cta">
 
-        <h2>Ready to Start Your Meeting?</h2>
+        <h2>
+
+          Ready to Start Your First Meeting?
+
+        </h2>
 
         <p>
-          Join thousands of users collaborating with MeetSphere.
+
+          Join thousands of users using MeetSphere every day.
+
         </p>
 
         <Link to="/register">
 
           <button>
+
             Get Started
+
+            <FaArrowRight />
+
           </button>
 
         </Link>
